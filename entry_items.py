@@ -1,10 +1,12 @@
 import pandas as pd
 
-import products
-#contains new_products table that has details of products
+#creates new_entry_items which has the details of the valid products that have been transacted (taken from the parent transactions table)
 
-#cleaning entry_items table ()
-entry_items = pd.read_csv(r'C:\Users\Woosuk Kim\Downloads\[Cognitive AI] Database Snapshot\entry_items.csv')
+import products
+
+#cleaning entry_items table (a semi-processed table that shows the details of the products that have been transacted)
+entry_items = pd.read_csv(r'C:\Users\Woosuk Kim\Downloads\[Cognitive AI] Database Snapshot\entry_items.csv') #initial database snapshot data
+# entry_items = pd.read_csv(r'C:\Users\Woosuk Kim\Downloads\cognitive_ai_2022_data\entry_items.csv') #2022 data
 entry_items.drop("created_at", inplace=True, axis=1)
 entry_items.drop("updated_at", inplace=True, axis=1)
 
@@ -19,4 +21,5 @@ new_entry_items = pd.merge(entry_items_for_merge, products.new_products, on="Pro
 
 
 #Progress Checker
-# print(new_entry_items.columns)
+print(new_entry_items.columns)
+#Expected Result: ['Entry Item ID', 'Entry ID', 'Product ID', 'Quantity', 'Item Price', 'Brand ID', 'Brand Name', 'Product Name', 'Product Code', 'Disabled']

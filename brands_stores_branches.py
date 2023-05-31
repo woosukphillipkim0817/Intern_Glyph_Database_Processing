@@ -1,5 +1,6 @@
-import os
 import pandas as pd
+
+#Description: creates new_branches_table which shows the details of each branch (the branch's parent store and brand)
 
 #cleaning Brands table
 brands = pd.read_csv(r'C:\Users\Woosuk Kim\Downloads\[Cognitive AI] Database Snapshot\brands.csv')
@@ -42,11 +43,6 @@ new_branches_table = pd.merge(new_stores_table, branches, on="Store ID")
 for col in new_branches_table.columns:
     if new_branches_table[col].dtype == "object":
         new_branches_table[col] = new_branches_table[col].str.title().str.replace("Sm", "SM") #change title to upper for all caps
-
-#download data to local downloads folder
-# desired_file_name = "table_name.csv"
-# desired_file_path = os.path.join(os.path.expanduser('~'), 'Downloads', desired_file_name)
-# new_branches_table.to_csv(desired_file_path, index=False)
 
 #Progress Checker
 # print(new_branches_table.columns)

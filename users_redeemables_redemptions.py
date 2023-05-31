@@ -1,6 +1,8 @@
 import pandas as pd
 import re
 
+#Description: creates new_redemptions_table which shows every redeemable that has been transacted is detailed with the details of the redeemable and the user's information
+
 import brands_stores_branches
 #contains branches table merged with stores and brands (although each table exists on its own as well)
 

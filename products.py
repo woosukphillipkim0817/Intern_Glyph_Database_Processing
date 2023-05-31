@@ -1,5 +1,8 @@
 import pandas as pd
 
+#Description: creates new_products table which shows the details of every product per brand (primarily used this script to join into entry_items)
+
+
 import brands_stores_branches
 #contains branches table merged with stores and brands (although each table exists on its own as well)
 
