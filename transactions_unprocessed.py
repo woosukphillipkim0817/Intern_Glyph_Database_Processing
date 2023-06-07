@@ -12,4 +12,4 @@ transactions = transactions.rename(columns=lambda x: x.replace("_", " "))
 transactions = transactions.rename(columns=lambda x: x.replace("Id", "ID"))
 
 Progress Checker
-print(transactions.columns)
+# print(transactions.columns)

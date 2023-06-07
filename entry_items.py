@@ -21,5 +21,5 @@ new_entry_items = pd.merge(entry_items_for_merge, products.new_products, on="Pro
 
 
 #Progress Checker
-print(new_entry_items.columns)
+# print(new_entry_items.columns)
 #Expected Result: ['Entry Item ID', 'Entry ID', 'Product ID', 'Quantity', 'Item Price', 'Brand ID', 'Brand Name', 'Product Name', 'Product Code', 'Disabled']

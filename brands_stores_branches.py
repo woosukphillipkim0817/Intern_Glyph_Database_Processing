@@ -45,4 +45,4 @@ for col in new_branches_table.columns:
         new_branches_table[col] = new_branches_table[col].str.title().str.replace("Sm", "SM") #change title to upper for all caps
 
 #Progress Checker
-# print(new_branches_table.columns)
+# print(new_branches_table)

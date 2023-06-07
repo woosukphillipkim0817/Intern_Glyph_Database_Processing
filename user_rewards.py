@@ -16,4 +16,4 @@ user_rewards_PENDING = user_rewards[user_rewards["Status"] == "PENDING"].copy()
 
 
 #progress checker
-print(user_rewards_SENT.columns)
+# print(user_rewards_SENT.columns)
