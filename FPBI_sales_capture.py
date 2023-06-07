@@ -24,4 +24,4 @@ sales_capture_table["Percent of Total Sales"] = (sales_capture_table["Revenue"] 
 # sales_capture_table.to_csv(desired_file_path, index=False)
 
 #Progress Checker
-print(sales_capture_table)
+# print(sales_capture_table)

@@ -37,5 +37,4 @@ basket_analysis_result = basket_analysis_result.applymap(lambda x: x.title() if 
 # basket_analysis_result.to_csv(desired_file_path, index=False)
 
 #Progress Checker
-# print(misc_items_grouped_by_brand_sorted)
-print(basket_analysis_result)
+# print(basket_analysis_result)
