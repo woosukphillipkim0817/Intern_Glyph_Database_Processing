@@ -16,4 +16,4 @@ Stage 2: writing Python scripts using the Pandas library to process the raw data
 - Files with the FPBI label: these scripts take the semi-processed data from the scripts without the FPBI label (FPBI being a personal abbreviation of "For Power BI") and further process them into data tables that can be easily visualised on Power BI.
 
 Reflection (things I believe that can be done to improve upon this pipeline, but were outside of my current skillset)
-- 
+- scripts could be more efficient in terms of how they are taking in the raw data
