@@ -3,7 +3,7 @@
 OVERVIEW
 - Goal: processing a snapshot of Cloudlink's database for more effective data visualizations on Power BI
 - Language and Library Used: Python, Pandas
-- Modular Overview of Pipeline Implemented:
+- Modular Overview of Pipeline:
 raw data extracts in CSV format --(Python scripts)--> processed data downloaded to local operating system in CSV format --(Power BI)--> visualized data for client
 
 PROCESS Stage 1: experimenting with PowerBI and proposing a shift to using Python and the Pandas library
@@ -16,4 +16,5 @@ Stage 2: writing Python scripts using the Pandas library to process the raw data
 - Files with the FPBI label: these scripts take the semi-processed data from the scripts without the FPBI label (FPBI being a personal abbreviation of "For Power BI") and further process them into data tables that can be easily visualised on Power BI.
 
 Reflection (things I believe that can be done to improve upon this pipeline, but were outside of my current skillset)
-- scripts could be more efficient in terms of how they are taking in the raw data
+- The scripts can be adapted to be more efficient in terms of how they are taking in the data. Currently, the scripts are reading extracts of the database using the pandas library's built-in tools (in the files without the FPBI label) and then creating these semi-processed tables for analysis. However, I believe that through the usage of a declarative programming language or a database management language, I believe that this intermediate step can be done directly, meaning Python should only be used for preparing the data for PowerBI and eliminating the current need of taking this semi-processed data (the extracts) and merging these tables to make it resemble the raw data again.
+- The snapshots extracted from the database sometimes contained bugs causing the pandas CSV reader to be unable to parse the data (an example is in the 2022 misc_entry_items table, line 4923 has 9 columns instead of 8). If the point above is not taken into account, is there a way to format the raw data prior to analysis using Python?
